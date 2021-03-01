@@ -11,6 +11,7 @@ void* increment_global_var(void* mutex_pointer)
 
     for(increment_count = 0; increment_count < 10; ++increment_count)
     {
+        // critical section
         pthread_mutex_lock(mutex_pointer);
         ++global_variable;
 
